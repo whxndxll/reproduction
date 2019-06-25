@@ -1,0 +1,12 @@
+---
+title: "Figura, elementos de uma reprodução"
+output: html_document
+---
+
+```{r}
+library(scifigure)
+exps <- init_experiments(2, c("Kang et. al. 2017", "Replication"))
+exps[c("data","analysis_plan","population","code"), 1] <- "unobserved"
+exps[c("experimenter", "analyst", "estimate","population","data","code","analysis_plan"), 2] <- "different"
+sci_figure(exps)
+```
